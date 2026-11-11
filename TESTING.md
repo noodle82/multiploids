@@ -23,3 +23,12 @@ This is desktop-browser and simulated-viewport validation. A physical iPad and s
 31 automated checks including encouragement variety across saved sessions. The fixed ring is removed from Orbit. Seven new phrases per bank bring the total to 154 local WAV clips. Browser checks exercise actual varied praise and render the plain Orbit body.
 
 Final v0.3.1 cache contains 187 requests. The character camera fits the wide body within narrow preview cards.
+
+## v0.3.2 touch interaction fix
+Simulated touch and real pointer events checked hold-to-purr, release, cancellation, single tap, double tap and desktop hold. Canvas dragging, touch callouts and selection are blocked on the creature only. No second canvas appeared. Safari/iPad hardware still needs user verification.
+
+## v0.4 checks
+32 domain tests pass, including compact fleet selection. Browser checks covered expand/collapse with all twelve selected tables, keeping the active rocket visible, five independent partial-progress strips, all seven practice/mixed views at 820/1024/390/320px, bottom-left exits, and fuel-cell wording. The final twelve correct answers triggered the top lamp flash, staggered twelve-lamp chase, ignition without numbers, lift-off, cruise and exactly one earned launch. Reduced-motion and leaving a preview were checked. All six Cosmo encounters retained relative scene positioning and centred creatures. Simulated touch hold/release/cancel, tap, double-tap and desktop purr still passed. No runtime exceptions in passing runs. Physical Safari/iPad testing remains required.
+
+## Apple build preparation
+The pinned dependencies installed successfully with npm ci from the local integrity-checked cache. Three native tests verify consistent Bundle IDs, build numbering, opaque 1024px icon, offline asset configuration and actual Capacitor CocoaPods Xcode-template patching. The template test checks universal iPhone/iPad settings, Info.plist, icon and privacy resource inclusion, plus idempotent patching. Total domain/native tests: 35. The native asset staging step bundles all local runtime files in dist. A signed archive cannot be tested on this Windows host; Codemagic must perform the macOS build.

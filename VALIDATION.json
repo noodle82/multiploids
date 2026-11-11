@@ -1,7 +1,7 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "date": "2026-11-11",
-  "automatedTests": 31,
+  "automatedTests": 35,
   "browserRuntimeExceptions": 0,
   "starterGames": 2,
   "unlockableGames": 12,
@@ -22,12 +22,47 @@
   "audioClips": 154,
   "offline": {
     "checked": true,
-    "cachedRequests": 187,
+    "cachedRequests": 188,
     "actualSpeechPlayback": true,
     "unchangedPlaybackRate": true
   },
   "physicalIpadTested": false,
   "published": false,
   "cosmoVariedEncouragement": true,
-  "plainOrbit": true
+  "plainOrbit": true,
+  "touchPurr": {
+    "nativeDragPrevented": true,
+    "touchHoldAndRelease": true,
+    "touchCancellation": true,
+    "tapAndDoubleTap": true,
+    "desktopHold": true,
+    "extraCanvas": false,
+    "physicalIpadTested": false
+  },
+  "compactFleet": true,
+  "fiveModuleStrips": true,
+  "allSixEncountersCentred": true,
+  "bottomModuleExit": true,
+  "fuelCellWording": true,
+  "launch": {
+    "topLampFlash": true,
+    "twelveLampChase": true,
+    "numericCountdown": false,
+    "ignition": true,
+    "smoke": true,
+    "acceleratingLift": true,
+    "cruise": true,
+    "reducedMotion": true
+  },
+  "appleBuild": {
+    "bundleId": "com.multiploids.tables",
+    "capacitor": "8.6.0",
+    "pinnedInstallChecked": true,
+    "xcodeTemplatePatchedAndParsed": true,
+    "universalTarget": true,
+    "opaque1024Icon": true,
+    "localAssetStaging": true,
+    "signedArchiveBuilt": false,
+    "uploadedToApple": false
+  }
 }

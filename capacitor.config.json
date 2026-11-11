@@ -1,0 +1,13 @@
+{
+  "appId": "com.multiploids.tables",
+  "appName": "Multiploids",
+  "webDir": "dist",
+  "server": {
+    "hostname": "localhost",
+    "iosScheme": "capacitor"
+  },
+  "ios": {
+    "backgroundColor": "#0a1028",
+    "contentInset": "automatic"
+  }
+}

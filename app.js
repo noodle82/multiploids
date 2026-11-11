@@ -11,7 +11,7 @@ const KEY='multiploids-prototype-v1',$=s=>document.querySelector(s),esc=s=>Strin
 let state;try{state=JSON.parse(localStorage.getItem(KEY));if(state.version!==1||!state.profiles?.length)state=null;}catch{}state??=newState();for(const pr of state.profiles)ensureFleet(pr);state.spaceVersion=2;
 let renderedDay=localDay(),fleetExpanded=false;
 let flight=null,launchTimer=null,launchInterval=null,arcadeMode=null,cleanArcade=null,cleanManip=null,orbitEditor=null,activeReadTable=null,readToken=0;
-let view='home',session=null,tablePicker=false,modal=null,draft={},feedback='',cleanModels=null,cleanGestures=null,advanceTimer=null,noticeTimer=null,offlineReady=false;
+let view='home',session=null,tablePicker=false,modal=null,draft={},feedback='',cleanModels=null,cleanGestures=null,advanceTimer=null,noticeTimer=null,offlineReady=location.protocol==='capacitor:';
 const p=()=>state.profiles[state.active]||state.profiles[0];
 function save(){if(badgeCount(p())>=6)p().rainbowUnlocked=true;try{localStorage.setItem(KEY,JSON.stringify(state));}catch{toast('This browser cannot save progress right now.');}}
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('#toast').classList.remove('show'),3400);}
@@ -90,6 +90,6 @@ function bindSpace(){
 
 document.addEventListener('keydown',e=>{if(view!=='game'||modal||session?.finished||e.target.matches('select,textarea')||e.target.closest('[data-pal]'))return;if(/^\d$/.test(e.key)){e.preventDefault();digit(e.key);}else if(e.key==='Backspace'){e.preventDefault();digit('back');}else if(e.key==='Enter'){e.preventDefault();submit();}});
 window.addEventListener('focus',()=>{if(view==='home'&&renderedDay!==localDay())render();});document.addEventListener('visibilitychange',()=>{if(!document.hidden&&view==='home'&&renderedDay!==localDay())render();});
-save();render();if('serviceWorker'in navigator&&globalThis.isSecureContext)navigator.serviceWorker.register('./sw.js').then(async()=>{await navigator.serviceWorker.ready;offlineReady=true;$('#offline-status')?.replaceChildren(document.createTextNode('✓ Ready offline'));}).catch(()=>{});
+save();render();if(location.protocol!=='capacitor:'&&'serviceWorker'in navigator&&globalThis.isSecureContext)navigator.serviceWorker.register('./sw.js').then(async()=>{await navigator.serviceWorker.ready;offlineReady=true;$('#offline-status')?.replaceChildren(document.createTextNode('✓ Ready offline'));}).catch(()=>{});
 
 function showArcadeResult(message){const host=$('#arcade-result');if(!host)return;host.className='arcade-result-panel';host.innerHTML='<h2>Another adventure?</h2><p>'+esc(message)+'</p><div class="button-row"><button class="primary" id="result-replay">Play again ↻</button><button class="secondary" id="result-return">Return to Starbase →</button></div>';$('#result-replay').onclick=()=>render();$('#result-return').onclick=()=>navigate('starbase');$('#result-replay').focus({preventScroll:true});}

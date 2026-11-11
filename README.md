@@ -1,4 +1,4 @@
-# Multiploids v0.3.1 — Get the crew home
+# Multiploids v0.4.0 — Get the crew home
 
 A playable space-themed multiplication prototype for ages 5–10. Dark starry skies, numbered rockets, a customisable Multiploid and a little crew who need help getting home. Division is not included.
 
@@ -87,3 +87,15 @@ The final launch check uses a twelve-colour vertical signal tower. Lamps light f
 Cosmo Hop encouragement varies between Keep going, Great, Super, Awesome, Lovely work, You got it, Fantastic and Brilliant. Its shuffled phrase queue avoids adjacent repeats and remains saved with the run. Milestone and record celebrations still take priority. All encouragement is included in both offline speech banks.
 
 The blue ring has been removed from the basic Orbit body. A tilted, floating planet ring is recorded in NEXT-UPDATE.md as a later optional accessory.
+
+## v0.4 mission layout and launch
+
+The fleet starts compact with three rockets, including the active ship. Show all / Show fewer expands or collapses large selections. Each card has five separate module strips, with partial progress inside each strip. Every practice screen has a large bottom-left Mission Control button. Rocket Fuel consistently describes adding fuel cells.
+
+The final launch check flashes its top lamp, then chases all twelve lights before ignition. There is no numeric countdown. Engine shake, rolling exhaust, a longer accelerating lift-off and a short flight-home scene make launch more visible. Reduced-motion settings remove the flashing and shaking.
+
+A class-name collision between the Cosmo planet encounter and its planet artwork caused the whole scene to become absolutely positioned and move right. Artwork now uses its own class, and companion slots use stable centred anchors. All six encounters were checked through successive answers. The iPad long-press/purr fix is included. Saved explorer progress is preserved.
+
+## iPhone and iPad build
+
+The repository includes a pinned Capacitor 8.6.0 setup for com.multiploids.tables. Read CODEMAGIC-SETUP.md to create the Apple record/profile and run the Codemagic workflow. The installed app includes every game, font and both voice banks locally. Run npm ci, npm test and npm run ios:check for configuration checks. The signed Apple build is created on Codemagic’s macOS machine with npm run ios:prepare. The installed app has separate saved progress from Safari.
