@@ -1,0 +1,33 @@
+{
+  "version": "0.3.1",
+  "date": "2026-11-11",
+  "automatedTests": 31,
+  "browserRuntimeExceptions": 0,
+  "starterGames": 2,
+  "unlockableGames": 12,
+  "unlockRule": "one per different numbered rocket, retained across creation missions",
+  "targetedRecap": true,
+  "verticalLaunchLamps": 12,
+  "twelfthLampHeld": true,
+  "cosmoStreakResume": true,
+  "voices": [
+    "Heart 2",
+    "Little Monster"
+  ],
+  "bodyShapes": [
+    "Orbit",
+    "Comet",
+    "Lunar"
+  ],
+  "audioClips": 154,
+  "offline": {
+    "checked": true,
+    "cachedRequests": 187,
+    "actualSpeechPlayback": true,
+    "unchangedPlaybackRate": true
+  },
+  "physicalIpadTested": false,
+  "published": false,
+  "cosmoVariedEncouragement": true,
+  "plainOrbit": true
+}
