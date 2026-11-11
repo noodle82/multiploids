@@ -62,20 +62,26 @@ export function bindPalInteractions(){
  document.querySelectorAll('[data-pal]').forEach(element=>{if(element.closest('[data-baby-play]'))return;
   const gesture=createPalGesture({react:kind=>react(element,kind),stop:()=>{if(reactingElement===element)stopPalInteraction();}});
   activeGestures.add(gesture);
+  let activePointer=null;
+  // Safari can lift a canvas snapshot on a long press. The creature owns this
+  // gesture; the browser must not start text selection, dragging or a callout.
+  element.querySelectorAll('canvas,img').forEach(child=>{child.draggable=false;});
+  const preventNative=e=>{if(e.cancelable)e.preventDefault();};
+  element.addEventListener('touchstart',preventNative,{passive:false});
   const handlers={
-   pointerdown:e=>{if(e.button!==0||e.isPrimary===false)return;audioReady();element.setPointerCapture(e.pointerId);gesture.down(e.clientX,e.clientY);},
+   pointerdown:e=>{if(e.button!==0||e.isPrimary===false)return;if(e.pointerType!=='mouse')preventNative(e);activePointer=e.pointerId;audioReady();try{element.setPointerCapture(e.pointerId);}catch{}gesture.down(e.clientX,e.clientY);},
    pointermove:e=>{gesture.move(e.clientX,e.clientY);const r=element.getBoundingClientRect();element.style.setProperty('--look-x',`${Math.max(-5,Math.min(5,(e.clientX-r.x-r.width/2)/r.width*10))}deg`);},
-   pointerup:()=>gesture.up(),pointercancel:()=>gesture.cancel(),lostpointercapture:()=>gesture.cancel(),
+   pointerup:e=>{if(e.pointerId!==activePointer)return;activePointer=null;gesture.up();},pointercancel:()=>{activePointer=null;gesture.cancel();},lostpointercapture:e=>{if(e.pointerId===activePointer){activePointer=null;gesture.cancel();}},
+   dragstart:preventNative,selectstart:preventNative,
    contextmenu:e=>e.preventDefault(),click:e=>e.preventDefault(),
    keydown:e=>{if(e.repeat)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();audioReady();react(element,'oof');}if(e.key.toLowerCase()==='d')react(element,'dance');if(e.key.toLowerCase()==='g')react(element,'giggle');if(e.key.toLowerCase()==='p')react(element,'purr');},
    keyup:e=>{if(e.key.toLowerCase()==='p'&&currentReaction==='purr')stopPalInteraction();},
    blur:()=>gesture.cancel()
   };
-  // Pointer capture normally ends after pointerup. Do not cancel the pending
-  // single-tap timer on that automatic lostpointercapture event.
-  handlers.lostpointercapture=()=>{};
+  // After pointerup the pointer is already cleared, so automatic capture loss
+  // leaves the pending single tap intact. Unexpected capture loss cancels a hold.
   for(const [event,fn]of Object.entries(handlers))element.addEventListener(event,fn);
-  cleanups.push(()=>{gesture.dispose();activeGestures.delete(gesture);for(const[event,fn]of Object.entries(handlers))element.removeEventListener(event,fn);});
+  cleanups.push(()=>{gesture.dispose();activeGestures.delete(gesture);element.removeEventListener('touchstart',preventNative);for(const[event,fn]of Object.entries(handlers))element.removeEventListener(event,fn);});
  });
  document.querySelectorAll('[data-pal-action]').forEach(button=>{
   const click=()=>{const element=button.closest('.pal-stage')?.querySelector('[data-pal]');if(!element)return;audioReady();react(element,button.dataset.palAction);if(button.dataset.palAction==='purr')timers.push(setTimeout(stopPalInteraction,2200));};

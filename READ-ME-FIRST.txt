@@ -1,0 +1,7 @@
+Use this combined update instead of the earlier iPad-only ZIP.
+
+Extract the ZIP. In your Multiploids GitHub repository, choose Add file > Upload files. Drag everything INSIDE the extracted multiploids-combined-update folder into the upload area, including the tests folder and the new mission-update.css file. Start at the repository top level. Commit changes. There are only 15 files, and no audio needs uploading again.
+
+Wait for GitHub Pages to finish deploying. Refresh Safari, wait a few seconds for the new offline files, then refresh again if needed. Keep site data so progress is not erased.
+
+Includes: purr/long-press fix, corrected planet scene positioning, stable creature slots, collapsible three-rocket preview, five-part module progress strips, clearer Mission Control buttons, fuel-cell wording and the new launch sequence without a numerical countdown.

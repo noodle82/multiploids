@@ -28,3 +28,7 @@
 
 .launch-recap-banner{padding:17px 20px;margin:0 0 18px;border:1px solid #7b72aa;background:#292842;border-radius:16px;color:#dacdf1}.launch-recap-banner strong{font:18px Round}.launch-recap-banner p{font-size:11px;line-height:1.8;margin-top:8px}
 @media(max-width:700px){.game-stage:has(.launch-check-stage){height:440px;min-height:440px}.launch-check-stage{height:440px;min-height:440px}.launch-check-stage .launch-lamps{top:145px}.launch-check-stage .preflight-rocket{top:160px}.launch-check-stage .stage-heading p{max-width:calc(100% - 65px)}}
+/* Keep touch holds on the creature; scrolling remains available around it. */
+.pal-creature,.hands-on-copilot .pal-creature{touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-user-drag:none}
+.pal-creature *{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-user-drag:none}
+.pal-creature .monster-canvas canvas{pointer-events:none}
