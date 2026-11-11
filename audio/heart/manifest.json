@@ -1,0 +1,315 @@
+{
+  "voice": "af_heart",
+  "sampleRate": 24000,
+  "licence": "Kokoro model Apache 2.0; original generated speech",
+  "clips": {
+    "1": {
+      "file": "1.wav",
+      "text": "1"
+    },
+    "2": {
+      "file": "2.wav",
+      "text": "2"
+    },
+    "3": {
+      "file": "3.wav",
+      "text": "3"
+    },
+    "4": {
+      "file": "4.wav",
+      "text": "4"
+    },
+    "5": {
+      "file": "5.wav",
+      "text": "5"
+    },
+    "6": {
+      "file": "6.wav",
+      "text": "6"
+    },
+    "7": {
+      "file": "7.wav",
+      "text": "7"
+    },
+    "8": {
+      "file": "8.wav",
+      "text": "8"
+    },
+    "9": {
+      "file": "9.wav",
+      "text": "9"
+    },
+    "10": {
+      "file": "10.wav",
+      "text": "10"
+    },
+    "11": {
+      "file": "11.wav",
+      "text": "11"
+    },
+    "12": {
+      "file": "12.wav",
+      "text": "12"
+    },
+    "14": {
+      "file": "14.wav",
+      "text": "14"
+    },
+    "15": {
+      "file": "15.wav",
+      "text": "15"
+    },
+    "16": {
+      "file": "16.wav",
+      "text": "16"
+    },
+    "18": {
+      "file": "18.wav",
+      "text": "18"
+    },
+    "20": {
+      "file": "20.wav",
+      "text": "20"
+    },
+    "21": {
+      "file": "21.wav",
+      "text": "21"
+    },
+    "22": {
+      "file": "22.wav",
+      "text": "22"
+    },
+    "24": {
+      "file": "24.wav",
+      "text": "24"
+    },
+    "25": {
+      "file": "25.wav",
+      "text": "25"
+    },
+    "27": {
+      "file": "27.wav",
+      "text": "27"
+    },
+    "28": {
+      "file": "28.wav",
+      "text": "28"
+    },
+    "30": {
+      "file": "30.wav",
+      "text": "30"
+    },
+    "32": {
+      "file": "32.wav",
+      "text": "32"
+    },
+    "33": {
+      "file": "33.wav",
+      "text": "33"
+    },
+    "35": {
+      "file": "35.wav",
+      "text": "35"
+    },
+    "36": {
+      "file": "36.wav",
+      "text": "36"
+    },
+    "40": {
+      "file": "40.wav",
+      "text": "40"
+    },
+    "42": {
+      "file": "42.wav",
+      "text": "42"
+    },
+    "44": {
+      "file": "44.wav",
+      "text": "44"
+    },
+    "45": {
+      "file": "45.wav",
+      "text": "45"
+    },
+    "48": {
+      "file": "48.wav",
+      "text": "48"
+    },
+    "49": {
+      "file": "49.wav",
+      "text": "49"
+    },
+    "50": {
+      "file": "50.wav",
+      "text": "50"
+    },
+    "54": {
+      "file": "54.wav",
+      "text": "54"
+    },
+    "55": {
+      "file": "55.wav",
+      "text": "55"
+    },
+    "56": {
+      "file": "56.wav",
+      "text": "56"
+    },
+    "60": {
+      "file": "60.wav",
+      "text": "60"
+    },
+    "63": {
+      "file": "63.wav",
+      "text": "63"
+    },
+    "64": {
+      "file": "64.wav",
+      "text": "64"
+    },
+    "66": {
+      "file": "66.wav",
+      "text": "66"
+    },
+    "70": {
+      "file": "70.wav",
+      "text": "70"
+    },
+    "72": {
+      "file": "72.wav",
+      "text": "72"
+    },
+    "77": {
+      "file": "77.wav",
+      "text": "77"
+    },
+    "80": {
+      "file": "80.wav",
+      "text": "80"
+    },
+    "81": {
+      "file": "81.wav",
+      "text": "81"
+    },
+    "84": {
+      "file": "84.wav",
+      "text": "84"
+    },
+    "88": {
+      "file": "88.wav",
+      "text": "88"
+    },
+    "90": {
+      "file": "90.wav",
+      "text": "90"
+    },
+    "96": {
+      "file": "96.wav",
+      "text": "96"
+    },
+    "99": {
+      "file": "99.wav",
+      "text": "99"
+    },
+    "100": {
+      "file": "100.wav",
+      "text": "100"
+    },
+    "108": {
+      "file": "108.wav",
+      "text": "108"
+    },
+    "110": {
+      "file": "110.wav",
+      "text": "110"
+    },
+    "120": {
+      "file": "120.wav",
+      "text": "120"
+    },
+    "121": {
+      "file": "121.wav",
+      "text": "121"
+    },
+    "132": {
+      "file": "132.wav",
+      "text": "132"
+    },
+    "144": {
+      "file": "144.wav",
+      "text": "144"
+    },
+    "times": {
+      "file": "times.wav",
+      "text": "Times"
+    },
+    "missing": {
+      "file": "missing.wav",
+      "text": "What number"
+    },
+    "equals": {
+      "file": "equals.wav",
+      "text": "Equals"
+    },
+    "hello": {
+      "file": "hello.wav",
+      "text": "Hello! I'm your Multiploid. Let's learn together!"
+    },
+    "brilliant": {
+      "file": "brilliant.wav",
+      "text": "Brilliant!"
+    },
+    "retry": {
+      "file": "retry.wav",
+      "text": "A brave try! Have one more go."
+    },
+    "five": {
+      "file": "five.wav",
+      "text": "Five in a row! Lovely work!"
+    },
+    "ten": {
+      "file": "ten.wav",
+      "text": "Ten in a row! Amazing!"
+    },
+    "record": {
+      "file": "record.wav",
+      "text": "A new personal best!"
+    },
+    "caught": {
+      "file": "caught.wav",
+      "text": "Good effort! My cloud has got me."
+    },
+    "ready": {
+      "file": "ready.wav",
+      "text": "Ready for a little sky hop?"
+    },
+    "keep-going": {
+      "file": "keep-going.wav",
+      "text": "Keep going!"
+    },
+    "great": {
+      "file": "great.wav",
+      "text": "Great!"
+    },
+    "super": {
+      "file": "super.wav",
+      "text": "Super!"
+    },
+    "awesome": {
+      "file": "awesome.wav",
+      "text": "Awesome!"
+    },
+    "lovely-work": {
+      "file": "lovely-work.wav",
+      "text": "Lovely work!"
+    },
+    "you-got-it": {
+      "file": "you-got-it.wav",
+      "text": "You got it!"
+    },
+    "fantastic": {
+      "file": "fantastic.wav",
+      "text": "Fantastic!"
+    }
+  }
+}
