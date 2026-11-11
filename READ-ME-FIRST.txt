@@ -1,7 +1,8 @@
-Use this combined update instead of the earlier iPad-only ZIP.
+Multiploids 0.4.1 — prevent accidental double-tap zoom
 
-Extract the ZIP. In your Multiploids GitHub repository, choose Add file > Upload files. Drag everything INSIDE the extracted multiploids-combined-update folder into the upload area, including the tests folder and the new mission-update.css file. Start at the repository top level. Commit changes. There are only 15 files, and no audio needs uploading again.
+Upload all eight application files in this folder to the top level of your Multiploids GitHub repository and commit. touch-controls.js is new. No audio, signing profile or UDID upload is needed.
 
-Wait for GitHub Pages to finish deploying. Refresh Safari, wait a few seconds for the new offline files, then refresh again if needed. Keep site data so progress is not erased.
+Website: refresh after GitHub Pages finishes deploying.
+Installed iPad app: run the existing Multiploids Family iPad — Ad Hoc workflow again in Codemagic. Download the NEW App.ipa from that build, upload it to Diawi, open the new installation link in Safari on the registered iPad, and install it over the existing app. If Diawi offers Download application, use Safari Page Menu > Request Mobile Website and reload to show Install application. Keep the existing app installed so its saved progress is retained. Version 0.4.1 should show on the new Diawi page.
 
-Includes: purr/long-press fix, corrected planet scene positioning, stable creature slots, collapsible three-rocket preview, five-part module progress strips, clearer Mission Control buttons, fuel-cell wording and the new launch sequence without a numerical countdown.
+Double-tap tickling and press-and-hold purring remain available. Rapid number-pad taps still enter both digits. A fresh iPad test is needed after installing this build.

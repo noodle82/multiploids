@@ -1,3 +1,4 @@
+import{installTouchZoomGuard}from'./touch-controls.js';
 import{fleetPreview,SYSTEMS,moduleAccess,LAUNCH_COLOURS,localDay,createLaunchCheck,scoreLaunchCheck,hasLaunchProof,ensureFleet,rocketPlan,rocketStatus,rocketDeck,recordRocket,launchRocket,validConstruction,mixedCheck,markCheck,ENCOUNTERS,encounterAt}from'./rockets.js';
 import{rocketArt,planetArt,starsArt}from'./space-art.js';
 import{bindOrbitDrawing,bindRowBuilder}from'./hands-on.js';
@@ -7,6 +8,7 @@ import {ITEMS,SHOP,EYE_COLOURS} from './wardrobe.js';
 import {palMarkup,mountMonsters,COLOURS} from './monster.js';
 import {bindPalInteractions,setSound,soundEffect,setCharacterVoice} from './pal-interaction.js';
 import {say,sayFact,stopVoice,soundEnabled,unlockVoice} from './audio.js';
+installTouchZoomGuard();
 const KEY='multiploids-prototype-v1',$=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let state;try{state=JSON.parse(localStorage.getItem(KEY));if(state.version!==1||!state.profiles?.length)state=null;}catch{}state??=newState();for(const pr of state.profiles)ensureFleet(pr);state.spaceVersion=2;
 let renderedDay=localDay(),fleetExpanded=false;

@@ -40,3 +40,6 @@
 .learning-stage .small-game-pal{left:0;right:0;margin-inline:auto;transform:none}
 .launch-check-stage .small-game-pal{left:10%;right:0;margin-inline:auto;transform:none}
 .cosmic-stage .game-creature{left:0;right:0;margin-inline:auto;translate:none}
+
+/* Prevent accidental double-tap smart zoom while retaining pan/pinch zoom. */
+html,body,#app{touch-action:manipulation}
