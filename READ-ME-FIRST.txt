@@ -1,8 +1,15 @@
-Multiploids 0.4.1 — prevent accidental double-tap zoom
+Multiploids 0.4.2 — Bright rainbow and weekly suits
 
-Upload all eight application files in this folder to the top level of your Multiploids GitHub repository and commit. touch-controls.js is new. No audio, signing profile or UDID upload is needed.
+1. Extract this ZIP on your computer.
+2. Open https://github.com/noodle82/multiploids on the main branch.
+3. Choose Add file > Upload files. Drag the TEN top-level application files and the tests FOLDER from the extracted ZIP into the upload area. Do not upload the enclosing multiploids-rainbow-weekly-update folder. READ-ME-FIRST.txt is just this guide; it does not need uploading.
+4. Commit the changes. No audio, certificates, profiles, Bundle ID or device registrations need changing.
+5. For the installed iPad app, start a new Multiploids Family iPad — Ad Hoc build in Codemagic.
+6. Download the new App.ipa, upload it to Diawi, and open the NEW installation link in Safari on the registered iPad. If it offers Download application, choose Safari page menu > Request Mobile Website and reload to see Install application.
+7. Install over the existing app. Do NOT delete it: an in-place update retains this device’s progress. The new version is 0.4.2.
 
-Website: refresh after GitHub Pages finishes deploying.
-Installed iPad app: run the existing Multiploids Family iPad — Ad Hoc workflow again in Codemagic. Download the NEW App.ipa from that build, upload it to Diawi, open the new installation link in Safari on the registered iPad, and install it over the existing app. If Diawi offers Download application, use Safari Page Menu > Request Mobile Website and reload to show Install application. Keep the existing app installed so its saved progress is retained. Version 0.4.1 should show on the new Diawi page.
+RAINBOW: Your Multiploid > Your rainbow suit! > Wear my rainbow suit. This appears for anyone who has already earned Rainbow Explorer. Bright rainbow BODY colour still follows the existing next-mission colour-choice rule. The SUIT can be worn immediately on the current character.
 
-Double-tap tickling and press-and-hold purring remain available. Rapid number-pad taps still enter both digits. A fresh iPad test is needed after installing this build.
+WEEKLY SUIT: Your Multiploid > This week’s space suit. Earn it by trying 20 different reward-eligible questions that week, then tap My new suit! Wear it. Each Monday offers a new dated design. Claimed suits stay in My collection > coats and can be swapped freely. Weekly credit begins after installing this update; old questions already credited to the current creation mission do not count again as extra practice.
+
+CHECKED: 39 automated tests; 3D suit rendering on all three alien shapes; iPad/phone layout; permanent outfit collection; fully offline reload and both voices. Please retest the look and fit on your physical iPad after installing.

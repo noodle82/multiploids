@@ -43,3 +43,7 @@
 
 /* Prevent accidental double-tap smart zoom while retaining pan/pinch zoom. */
 html,body,#app{touch-action:manipulation}
+
+.weekly-suit{position:relative;overflow:hidden;border-color:#67d6df}.suit-swatch{float:right;width:72px;height:80px;border-radius:24px 24px 15px 15px;background:radial-gradient(circle at 24% 28%,#fff 0 2px,transparent 3px),radial-gradient(circle at 70% 60%,#fff 0 2px,transparent 3px),linear-gradient(135deg,var(--suit-colour),var(--suit-accent));display:grid;place-items:center;color:white;font-size:32px;margin:0 0 12px 16px;box-shadow:0 5px 20px #18c7d533}.weekly-suit progress{width:100%;accent-color:#58d7c7;height:14px}.weekly-suit small{display:block;line-height:1.5}
+
+.rainbow-ribbon{height:16px;border-radius:20px;margin:16px 0 22px;background:linear-gradient(90deg,#ff244b 0% 14%,#ff861c 14% 28%,#ffda16 28% 42%,#19c857 42% 57%,#04bcea 57% 71%,#4054f4 71% 85%,#b425ed 85%)}.rainbow-suit{border-color:#c16cf0}
