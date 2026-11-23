@@ -1,4 +1,4 @@
-# Multiploids v1.0.0 — Get the crew home
+# Multiploids v1.0.1 — Get the crew home
 
 A playable space-themed multiplication prototype for ages 5–11. Dark starry skies, numbered rockets, a customisable Multiploid and a little crew who need help getting home. Division is not included.
 
@@ -152,3 +152,7 @@ Codemagic Xcode 27.2 / M2 machine specification: https://docs.codemagic.io/specs
 - Offline privacy information accessible from the footer; full online policy link in Grown-ups.
 - Retains weekly suits, vivid rainbow, coloured module haze and the three-eyed logo.
 - Build the Multiploids iOS TestFlight workflow in Codemagic. Signing and Apple upload happen there, not on this Windows computer.
+
+## Release 1.0.1
+
+Modules open at their activity header instead of retaining Mission Control scroll. Resuming from the workshop and starting a new round also align the header; normal answering, cargo taps and drawing do not reset the viewport. Verified all eight learning modes at 1024×768, 1180×820, 820×1180 and 393×852.

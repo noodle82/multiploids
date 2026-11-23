@@ -52,3 +52,5 @@ html,body,#app{touch-action:manipulation}
 .system-card.system-cargo:not(.system-complete){background:linear-gradient(125deg,#203c39,#1b283c);border-color:#4c776a}.system-card.system-bridge:not(.system-complete){background:linear-gradient(125deg,#352b49,#1b283c);border-color:#766080}.system-card.system-arrays:not(.system-complete){background:linear-gradient(125deg,#1c3749,#1b283c);border-color:#4c7286}.system-card.system-draw:not(.system-complete){background:linear-gradient(125deg,#3d2b3e,#1b283c);border-color:#805e73}
 
 .review-banner{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:14px;background:#273c3e;border:2px solid #9bdaca;border-radius:16px;margin:10px 0}.review-banner strong{font-size:14px}.review-banner button{min-height:44px}#review-form{display:grid;gap:12px}#review-form input{max-width:100%;min-width:0}
+
+.game-top{scroll-margin-top:max(16px,env(safe-area-inset-top,0px))}

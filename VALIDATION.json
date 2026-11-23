@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "date": "2026-11-23",
-  "automatedTests": 49,
+  "automatedTests": 52,
   "browserRuntimeExceptions": 0,
   "starterGames": 2,
   "unlockableGames": 12,
@@ -23,8 +23,8 @@
   "offline": {
     "checked": false,
     "lastBrowserVerifiedVersion": "0.4.3",
-    "bundledNativeAssets": 193,
-    "note": "All current native bundle assets match source; complete fresh offline audio playback has not been repeated for 1.0.0."
+    "bundledNativeAssets": 194,
+    "note": "Current native bundle assets match source; fresh full offline playback not repeated for 1.0.1."
   },
   "physicalIpadTested": false,
   "published": false,
@@ -144,5 +144,11 @@
     "footerAccessible": true,
     "onlineLinkInGrownups": true
   },
-  "publicDevelopmentPreviewsRemoved": true
+  "publicDevelopmentPreviewsRemoved": true,
+  "moduleEntry": {
+    "headerAlignment": true,
+    "ordinaryRendersPreservePosition": true,
+    "browserCases": 32,
+    "physicalIpadTested": false
+  }
 }

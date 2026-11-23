@@ -76,3 +76,7 @@ Codemagic Xcode 27.2 / M2 machine specification: https://docs.codemagic.io/specs
 ## Release 1.0.0
 
 49 automated tests passed. Browser checks at iPad 1024×768 and iPhone 393×852 verified the grown-up gate, invalid/valid reviewer codes, shape/voice/rainbow/antennae/outfit selection, unchanged learner storage throughout demo, exit/reset/reload isolation, privacy navigation and no horizontal overflow or runtime exceptions. These are browser checks; a signed IPA and physical-device release test remain for Codemagic/TestFlight.
+
+## Release 1.0.1
+
+52 automated tests passed. 32 browser entry cases passed across eight modes and four tablet/phone sizes. Cargo and number-pad interaction preserved scroll position. Physical iPad testing and a signed Apple build remain for TestFlight.
