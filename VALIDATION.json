@@ -1,7 +1,7 @@
 {
-  "version": "0.4.0",
-  "date": "2026-11-11",
-  "automatedTests": 35,
+  "version": "1.0.0",
+  "date": "2026-11-23",
+  "automatedTests": 49,
   "browserRuntimeExceptions": 0,
   "starterGames": 2,
   "unlockableGames": 12,
@@ -21,10 +21,10 @@
   ],
   "audioClips": 154,
   "offline": {
-    "checked": true,
-    "cachedRequests": 188,
-    "actualSpeechPlayback": true,
-    "unchangedPlaybackRate": true
+    "checked": false,
+    "lastBrowserVerifiedVersion": "0.4.3",
+    "bundledNativeAssets": 193,
+    "note": "All current native bundle assets match source; complete fresh offline audio playback has not been repeated for 1.0.0."
   },
   "physicalIpadTested": false,
   "published": false,
@@ -64,5 +64,85 @@
     "localAssetStaging": true,
     "signedArchiveBuilt": false,
     "uploadedToApple": false
-  }
+  },
+  "weeklySuits": {
+    "localMondayRollover": true,
+    "questionsRequired": 20,
+    "retryFarmingPrevented": true,
+    "permanentCollection": true,
+    "rainbowOwnersUpgraded": true,
+    "shapesChecked": [
+      "orbit",
+      "comet",
+      "lunar"
+    ],
+    "widthsChecked": [
+      1024,
+      820,
+      390
+    ]
+  },
+  "missionControlSummaryBoxesRemoved": true,
+  "threeEyeIntro": false,
+  "threeEyeLogo": true,
+  "matchingNativeIcon": true,
+  "badgeAnnouncements": {
+    "speechBubble": true,
+    "offlineVoiceCheer": true,
+    "pausesQuestion": true,
+    "resumesAfterWorkshop": true,
+    "preservesRetry": true,
+    "pendingSurvivesReload": true,
+    "noOldBadgeReplay": true
+  },
+  "intro": {
+    "kind": "title-logo-times",
+    "liveCharacter": false,
+    "threeEyeLogo": true,
+    "orderedReveal": true,
+    "twoSoundCues": true,
+    "muteRespected": true,
+    "replayWithSound": true,
+    "skipCancelsCues": true,
+    "reducedMotion": true,
+    "widthsChecked": [
+      320,
+      390,
+      820,
+      1024
+    ]
+  },
+  "moduleHaze": {
+    "applied": true,
+    "matchesApprovedPreview": true,
+    "completedCardsRemainGreen": true,
+    "widthsChecked": [
+      320,
+      390,
+      820,
+      1180
+    ]
+  },
+  "appleSDK": {
+    "pinnedXcode": "27.2",
+    "minimumXcodeMajor": 27,
+    "minimumIOSSDKMajor": 27,
+    "guardParserTested": true,
+    "realMacBuildVerified": false,
+    "appleAcceptanceVerified": false
+  },
+  "appReview": {
+    "implemented": true,
+    "code": "773011",
+    "separateInMemoryDemo": true,
+    "noLearnerStorageWrites": true,
+    "exitResetReloadTested": true,
+    "phoneAndIpadBrowserChecked": true
+  },
+  "privacyNotice": {
+    "offline": true,
+    "footerAccessible": true,
+    "onlineLinkInGrownups": true
+  },
+  "publicDevelopmentPreviewsRemoved": true
 }

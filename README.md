@@ -1,6 +1,6 @@
-# Multiploids v0.4.0 — Get the crew home
+# Multiploids v1.0.0 — Get the crew home
 
-A playable space-themed multiplication prototype for ages 5–10. Dark starry skies, numbered rockets, a customisable Multiploid and a little crew who need help getting home. Division is not included.
+A playable space-themed multiplication prototype for ages 5–11. Dark starry skies, numbered rockets, a customisable Multiploid and a little crew who need help getting home. Division is not included.
 
 ## Try it
 
@@ -99,3 +99,56 @@ A class-name collision between the Cosmo planet encounter and its planet artwork
 ## iPhone and iPad build
 
 The repository includes a pinned Capacitor 8.6.0 setup for com.multiploids.tables. Read CODEMAGIC-SETUP.md to create the Apple record/profile and run the Codemagic workflow. The installed app includes every game, font and both voice banks locally. Run npm ci, npm test and npm run ios:check for configuration checks. The signed Apple build is created on Codemagic’s macOS machine with npm run ios:prepare. The installed app has separate saved progress from Safari.
+
+## v0.4.2 — Bright rainbow and weekly suits
+
+Rainbow skin uses seven saturated colour bands. Badge 6 also gives a fitted rainbow flight suit immediately, including for existing rainbow owners whose body colour is locked. The workshop has a prominent wear button. Existing progress, rocket launches, colours and saved character choices are preserved.
+
+A new dated suit design arrives every local Monday. Practising 20 distinct reward-eligible questions that week opens its claim button; retries and completed-question extra practice do not farm this reward. The weekly counter starts with this update. Earned and claimed outfits remain in the collection across calendar weeks and creation missions, and can be worn again. Designs alternate sparkle, aurora, galaxy and rainbow textiles, with a deterministic new colour combination each week. This works offline using the device clock; changing a device clock is not prevented by this prototype.
+
+Suits fit each alien's actual torso surface. Their full colour pattern spans the garment rather than being cut down to a blue strip. New suit textures are generated locally and do not download artwork or change speech.
+
+## v0.4.3 — A simpler Mission Control and a three-eyed welcome
+
+Removed the two permanent creation-badge / rocket-systems summary boxes from Mission Control. Per-rocket five-strip progress, module checks and launch readiness remain visible in their existing places.
+
+New creation badges pause the current question and open a celebration from the child's actual Multiploid. Its speech bubble names the unlocked feature. The approved offline voice gives a positive cheer; the full explanatory sentence is on screen. Choose Update my Multiploid to visit the workshop, or Keep playing to continue. Correct-answer advancement, a first-mistake retry, mixed checks and the final launch check retain their current state. Pending notices survive reload; existing earned badges do not replay on upgrade. Badges and rocket completion rules are unchanged.
+
+A short, skippable welcome shows Multiploids and a dancing, three-eyed mint character. It automatically enters Mission Control after five seconds and can be replayed under Grown-ups. Reduced-motion settings use a still character and remove the entrance animation. The introduction does not change the child's chosen character.
+
+The new mint three-eyed logo uses the rounded Learnoids family style, based on https://learnoids.co.uk/assets/mark.svg, with a clear multiplication symbol. It replaces the previous in-game header mark and browser icon, appears in the welcome, and has a matching opaque 1024px iPad app icon.
+
+Verified: 43 automated learning/reward/native tests; actual browser question-to-badge/customise/resume and retry behaviour; pending-notice reload; intro skip/automatic finish/reduced motion; 320/390/820/1024px layouts; fully offline reload with 192 cached requests and actual Heart 2 / Little Monster speech at unchanged playback speed. Visual screenshots were reviewed. No physical iPad or macOS signed archive was produced locally; use the existing Codemagic workflow and install over the existing app.
+
+## v0.4.4 — Title, logo, then ×
+
+Replaces the v0.4.3 introduction. The Multiploids title appears first, followed by the three-eyed family logo with a soft two-note bloop. The logo's multiplication badge pops in last with a short finishing chime. There is no live 3D character or dancing creature in this intro. The in-game header, favicon and native icon retain the new three-eyed logo.
+
+Skip and Let's play enter Mission Control, or the intro finishes automatically after about four seconds. Replay with sound explicitly enables and unlocks audio with a tap, then restarts the sequence. This provides a fallback when Safari blocks automatic startup audio. Muted startup remains silent, delayed effects are cancelled when leaving, and reduced motion shows the completed logo without entrance animations. Sounds are generated locally; no audio bank or paid service is required.
+
+This package also includes the previous update's Mission Control simplification, badge speech bubbles, paused customisation flow and matching iPad app icon. Use this package instead of the v0.4.3 ZIP; it can be uploaded over v0.4.2 or v0.4.3.
+
+Verified: all 43 automated learning/reward/native checks pass. Browser checks confirm title/logo/× order, exactly three logo eyes, no intro WebGL character, both procedural sound cues, saved mute, replay with sound, Skip cancelling queued effects, reduced motion, automatic finish and 320/390/820/1024px widths without overflow or runtime errors. Physical iPad sound/autoplay and macOS signing still require the parent's device/Codemagic build.
+
+## v0.4.5 — Module colours and Apple SDK build selection
+
+Applied the approved haze: mint Cargo Crew, lilac Launch Bridge, blue Array Shields and pink Orbit Sketch. Rocket Fuel keeps its current warm treatment. Completed modules retain the existing green completed styling.
+
+Both Codemagic workflows explicitly select the documented stable Xcode 27.2 image instead of the latest alias. A dependency-free first step runs xcodebuild -version and xcrun --sdk iphoneos --show-sdk-version on the build Mac, logs both versions and stops early if either Xcode or the iOS SDK is below 27. The TestFlight publishing settings, signing integration, Bundle ID and device deployment target are unchanged.
+
+Apple's ITMS-90725 message is advance notice of its April 2027 requirement. Existing binaries cannot acquire a different SDK after building: upload this updated configuration and make a NEW Codemagic TestFlight build. Xcode 27.2 is documented as available for the Mac mini M2. No claim is made that a signed Xcode 27.2 archive has been produced or accepted here; the next Codemagic build must verify that.
+
+Checked: 46 automated tests, including accepting Xcode/iOS SDK 27.2 and newer, rejecting 26.5 or a mismatched older SDK, and clear errors for unreadable versions. Browser checks confirm the actual stylesheet matches the approved preview, completed cards stay green and 320/390/820/1180px layouts have no horizontal overflow or runtime exceptions. All 192 bundled native runtime assets match source.
+
+Sources checked 23 November 2026:
+Apple SDK requirement: https://developer.apple.com/news/?id=k1mtkt1k
+Codemagic Xcode 27.2 release and selection: https://codemagic.io/whats-new/
+Codemagic Xcode 27.2 / M2 machine specification: https://docs.codemagic.io/specs-macos/xcode-27-2/
+
+## Release 1.0.0
+
+- Grown-ups → App Review → 773011 opens a separate in-memory demonstration with all creation badges. Fresh demo and Exit App Review are always visible. Reloading also returns to the saved learner. Demo changes never write learner storage.
+- Launch and intro development previews removed from Grown-ups. Normal earned flight replays remain available.
+- Offline privacy information accessible from the footer; full online policy link in Grown-ups.
+- Retains weekly suits, vivid rainbow, coloured module haze and the three-eyed logo.
+- Build the Multiploids iOS TestFlight workflow in Codemagic. Signing and Apple upload happen there, not on this Windows computer.
