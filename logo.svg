@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path d="M25 27 20 12M54 27l7-15" stroke="#a78dcc" stroke-width="7" stroke-linecap="round"/><circle cx="19" cy="10" r="6" fill="#aa91ce"/><circle cx="62" cy="10" r="6" fill="#aa91ce"/><path d="M9 48C8 20 71 15 73 47 77 80 8 84 9 48" fill="#bba3df"/><ellipse cx="29" cy="44" rx="11" ry="13" fill="#faf7ff"/><ellipse cx="53" cy="44" rx="11" ry="13" fill="#faf7ff"/><ellipse cx="31" cy="45" rx="5" ry="8" fill="#594670"/><ellipse cx="51" cy="45" rx="5" ry="8" fill="#594670"/><path d="M31 61q9 7 18-1" stroke="#594670" fill="none" stroke-width="3" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title">
+ <title id="title">Multiploids — three-eyed learning alien</title>
+ <defs>
+  <radialGradient id="mint-skin" cx="32%" cy="23%" r="83%"><stop stop-color="#c5f0e1"/><stop offset=".6" stop-color="#83cdbb"/><stop offset="1" stop-color="#56a99e"/></radialGradient>
+  <radialGradient id="purple-iris"><stop stop-color="#ac8ade"/><stop offset="1" stop-color="#7f54b9"/></radialGradient>
+  <radialGradient id="mint-foot"><stop stop-color="#c5eadf"/><stop offset="1" stop-color="#73b9ac"/></radialGradient>
+ </defs>
+ <ellipse cx="89" cy="164" rx="63" ry="8" fill="#33476b" opacity=".15"/>
+ <path d="M58 47Q54 29 43 25M120 47Q126 29 137 25" fill="none" stroke="#7bbdb1" stroke-width="8" stroke-linecap="round"/>
+ <circle cx="42" cy="21" r="8" fill="#b7a0de"/><circle cx="138" cy="21" r="8" fill="#b7a0de"/>
+ <ellipse cx="25" cy="115" rx="12" ry="23" transform="rotate(32 25 115)" fill="url(#mint-skin)"/>
+ <ellipse cx="155" cy="115" rx="12" ry="23" transform="rotate(-32 155 115)" fill="url(#mint-skin)"/>
+ <path d="M22 92C22 54 51 30 90 30S158 54 158 92C161 132 137 157 90 157S19 132 22 92Z" fill="url(#mint-skin)"/>
+ <ellipse cx="62" cy="155" rx="20" ry="12" fill="url(#mint-foot)"/><ellipse cx="118" cy="155" rx="20" ry="12" fill="url(#mint-foot)"/>
+ <g fill="#f7f4fc"><ellipse cx="50" cy="85" rx="18" ry="23"/><ellipse cx="90" cy="75" rx="19" ry="25"/><ellipse cx="130" cy="85" rx="18" ry="23"/></g>
+ <g fill="url(#purple-iris)"><ellipse cx="52" cy="87" rx="12" ry="17"/><ellipse cx="90" cy="78" rx="13" ry="18"/><ellipse cx="128" cy="87" rx="12" ry="17"/></g>
+ <g fill="#3b2d58"><ellipse cx="53" cy="88" rx="7" ry="12"/><ellipse cx="90" cy="79" rx="8" ry="13"/><ellipse cx="127" cy="88" rx="7" ry="12"/></g>
+ <path d="M73 114Q90 128 107 114" fill="none" stroke="#433251" stroke-width="4.8" stroke-linecap="round"/>
+ <circle cx="143" cy="142" r="26" fill="#b9a0e1" stroke="#ddcdf5" stroke-width="3"/>
+ <path d="m134 133 18 18m0-18-18 18" stroke="#293550" stroke-width="6.5" stroke-linecap="round"/>
+</svg>

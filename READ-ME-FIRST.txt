@@ -1,15 +1,22 @@
-Multiploids 0.4.2 — Bright rainbow and weekly suits
+Multiploids 0.4.4 — revised logo intro + all previous Mission Control updates
 
-1. Extract this ZIP on your computer.
-2. Open https://github.com/noodle82/multiploids on the main branch.
-3. Choose Add file > Upload files. Drag the TEN top-level application files and the tests FOLDER from the extracted ZIP into the upload area. Do not upload the enclosing multiploids-rainbow-weekly-update folder. READ-ME-FIRST.txt is just this guide; it does not need uploading.
-4. Commit the changes. No audio, certificates, profiles, Bundle ID or device registrations need changing.
-5. For the installed iPad app, start a new Multiploids Family iPad — Ad Hoc build in Codemagic.
-6. Download the new App.ipa, upload it to Diawi, and open the NEW installation link in Safari on the registered iPad. If it offers Download application, choose Safari page menu > Request Mobile Website and reload to see Install application.
-7. Install over the existing app. Do NOT delete it: an in-place update retains this device’s progress. The new version is 0.4.2.
+USE THIS PACKAGE INSTEAD OF THE PREVIOUS 0.4.3 ZIP.
+It includes the cleaner Mission Control, badge celebrations, new in-game logo and matching iPad icon, plus the revised intro without the dancing creature.
 
-RAINBOW: Your Multiploid > Your rainbow suit! > Wear my rainbow suit. This appears for anyone who has already earned Rainbow Explorer. Bright rainbow BODY colour still follows the existing next-mission colour-choice rule. The SUIT can be worn immediately on the current character.
+1. Extract this ZIP on your PC.
+2. Open https://github.com/noodle82/multiploids on branch main.
+3. Add file > Upload files. Upload the TWELVE application files and the native and tests FOLDERS from inside this extracted update. Keep those folder names. Do not upload the ZIP or the enclosing update folder. This README is instructions only.
+4. Commit. No audio folder, certificate, signing profile, device registration or Bundle ID change is required.
+5. Build Multiploids Family iPad — Ad Hoc in Codemagic for your daughter. Build TestFlight separately if you also want adult testers updated.
+6. Download that new App.ipa, upload it to Diawi and use the NEW installation link in Safari on her registered iPad.
+7. If Diawi says Download application, cancel the file download and use Safari page menu > Request Mobile Website, then reload to see Install application.
+8. Install over the existing app to retain progress. Do not delete the existing app. The new version is 0.4.4.
 
-WEEKLY SUIT: Your Multiploid > This week’s space suit. Earn it by trying 20 different reward-eligible questions that week, then tap My new suit! Wear it. Each Monday offers a new dated design. Claimed suits stay in My collection > coats and can be swapped freely. Weekly credit begins after installing this update; old questions already credited to the current creation mission do not count again as extra practice.
+THE NEW INTRO
+Multiploids title first → three-eyed logo with a cute soft bloop → × badge with a finishing chime. No separate 3D creature or dance.
+Skip introduction and Let's play enter the game. The intro also finishes automatically after about four seconds. If Safari does not allow startup sound, tap Replay with sound. Existing mute settings are respected until that explicit sound button is tapped. Grown-ups > Replay the introduction shows it again.
 
-CHECKED: 39 automated tests; 3D suit rendering on all three alien shapes; iPad/phone layout; permanent outfit collection; fully offline reload and both voices. Please retest the look and fit on your physical iPad after installing.
+The icon in the game header and on the iPad remains the new matching three-eyed design. Both Mission Control summary boxes remain removed. New badges pause the question while your own Multiploid celebrates and offers Update my Multiploid or Keep playing.
+
+CHECKED
+43 automated checks passed. Browser sequence, both new sound cues, mute/replay/skip behaviour, reduced motion and iPad/phone widths passed. All 192 local iPad bundle assets match source. Please check sound on your physical iPad after installing; no signed IPA was created locally.

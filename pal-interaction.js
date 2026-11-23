@@ -10,6 +10,7 @@ const audioReady=()=>{
  if(!Audio)return null;
  try{if(!audioContext){audioContext=new Audio();master=audioContext.createGain();master.gain.value=.2;master.connect(audioContext.destination);}if(audioContext.state==='suspended')audioContext.resume().catch(()=>{});return audioContext;}catch{return null;}
 };
+export function unlockPalAudio(){audioReady();}
 function tone(frequency,duration,start=0,type='sine',end=frequency,volume=.2){
  const ctx=audioReady();if(!ctx)return;
  const at=ctx.currentTime+start,osc=ctx.createOscillator(),gain=ctx.createGain();
@@ -28,6 +29,7 @@ function vowel(pitch,start,duration,formant=650){
 function playSound(kind){
  if(!enabled)return;
  stopPurr();
+ if(kind==='logo'||kind==='logo-finish'){const ctx=audioReady();if(!ctx||ctx.state!=='running')return;if(kind==='logo'){tone(610,.15,0,'sine',850,.22);tone(890,.21,.12,'sine',690,.17);tone(440,.19,.03,'triangle',480,.045);}else{tone(1174,.25,0,'sine',1568,.15);tone(1568,.28,.06,'sine',1760,.075);}return;}
  if(kind==='munch'){[0,.18,.36].forEach(t=>tone(160,.08,t,'triangle',95,.055));return;}
  if(kind==='babyhello'){const ctx=audioReady();if(ctx){const helloGain=ctx.createGain();helloGain.gain.value=4;helloGain.connect(master);scheduleBabyHello(ctx,helloGain);}return;}
  if(kind==='oof'){const f={heart2:470,bubbles:430,mallow:355,ziggle:540}[characterVoice]||430;vowel(f,0,.18,f*2.4);tone(f*.51,.14,.04,'sine',f*.43,.05);}

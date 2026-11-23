@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><defs><radialGradient id="sky"><stop stop-color="#354367"/><stop offset="1" stop-color="#0a1028"/></radialGradient><radialGradient id="skin" cx=".38" cy=".28" r=".8"><stop stop-color="#ceefed"/><stop offset="1" stop-color="#72b6c7"/></radialGradient></defs><rect width="1024" height="1024" fill="url(#sky)"/><g fill="#e8dcff"><circle cx="140" cy="185" r="5"/><circle cx="830" cy="215" r="8"/><circle cx="845" cy="740" r="4"/><path d="m222 770 5 18 18 5-18 5-5 18-5-18-18-5 18-5z"/></g><ellipse cx="512" cy="820" rx="245" ry="30" fill="#070f23"/><g fill="url(#skin)"><ellipse cx="426" cy="793" rx="58" ry="34"/><ellipse cx="597" cy="793" rx="58" ry="34"/><path d="M152 537Q167 373 334 317Q509 241 692 320Q863 380 875 535Q838 655 662 699Q505 760 347 700Q184 659 152 537Z"/><ellipse cx="196" cy="642" rx="42" ry="48"/><ellipse cx="830" cy="642" rx="42" ry="48"/></g><g fill="#f8f5ff" stroke="#c7e3e9" stroke-width="6"><ellipse cx="398" cy="472" rx="77" ry="91"/><ellipse cx="631" cy="472" rx="77" ry="91"/></g><g fill="#a48ad9"><ellipse cx="404" cy="479" rx="44" ry="63"/><ellipse cx="625" cy="479" rx="44" ry="63"/></g><g fill="#342946"><ellipse cx="407" cy="482" rx="25" ry="42"/><ellipse cx="623" cy="482" rx="25" ry="42"/></g><path d="M455 603Q512 640 572 602" fill="none" stroke="#463351" stroke-width="12" stroke-linecap="round"/><circle cx="795" cy="822" r="77" fill="#b5a2e2"/><path d="m770 797 50 50m0-50-50 50" stroke="#17233e" stroke-width="15" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><defs><radialGradient id="sky"><stop stop-color="#2d4263"/><stop offset="1" stop-color="#0a1028"/></radialGradient></defs><rect width="1024" height="1024" fill="url(#sky)"/><g fill="#c9c0ef" opacity=".8"><circle cx="130" cy="170" r="5"/><circle cx="870" cy="310" r="4"/><circle cx="812" cy="118" r="5"/><path d="m172 806 5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/></g><svg x="127" y="126" width="770" height="770" viewBox="0 0 180 180">
+ <title id="title">Multiploids — three-eyed learning alien</title>
+ <defs>
+  <radialGradient id="mint-skin" cx="32%" cy="23%" r="83%"><stop stop-color="#c5f0e1"/><stop offset=".6" stop-color="#83cdbb"/><stop offset="1" stop-color="#56a99e"/></radialGradient>
+  <radialGradient id="purple-iris"><stop stop-color="#ac8ade"/><stop offset="1" stop-color="#7f54b9"/></radialGradient>
+  <radialGradient id="mint-foot"><stop stop-color="#c5eadf"/><stop offset="1" stop-color="#73b9ac"/></radialGradient>
+ </defs>
+ <ellipse cx="89" cy="164" rx="63" ry="8" fill="#33476b" opacity=".15"/>
+ <path d="M58 47Q54 29 43 25M120 47Q126 29 137 25" fill="none" stroke="#7bbdb1" stroke-width="8" stroke-linecap="round"/>
+ <circle cx="42" cy="21" r="8" fill="#b7a0de"/><circle cx="138" cy="21" r="8" fill="#b7a0de"/>
+ <ellipse cx="25" cy="115" rx="12" ry="23" transform="rotate(32 25 115)" fill="url(#mint-skin)"/>
+ <ellipse cx="155" cy="115" rx="12" ry="23" transform="rotate(-32 155 115)" fill="url(#mint-skin)"/>
+ <path d="M22 92C22 54 51 30 90 30S158 54 158 92C161 132 137 157 90 157S19 132 22 92Z" fill="url(#mint-skin)"/>
+ <ellipse cx="62" cy="155" rx="20" ry="12" fill="url(#mint-foot)"/><ellipse cx="118" cy="155" rx="20" ry="12" fill="url(#mint-foot)"/>
+ <g fill="#f7f4fc"><ellipse cx="50" cy="85" rx="18" ry="23"/><ellipse cx="90" cy="75" rx="19" ry="25"/><ellipse cx="130" cy="85" rx="18" ry="23"/></g>
+ <g fill="url(#purple-iris)"><ellipse cx="52" cy="87" rx="12" ry="17"/><ellipse cx="90" cy="78" rx="13" ry="18"/><ellipse cx="128" cy="87" rx="12" ry="17"/></g>
+ <g fill="#3b2d58"><ellipse cx="53" cy="88" rx="7" ry="12"/><ellipse cx="90" cy="79" rx="8" ry="13"/><ellipse cx="127" cy="88" rx="7" ry="12"/></g>
+ <path d="M73 114Q90 128 107 114" fill="none" stroke="#433251" stroke-width="4.8" stroke-linecap="round"/>
+ <circle cx="143" cy="142" r="26" fill="#b9a0e1" stroke="#ddcdf5" stroke-width="3"/>
+ <path d="m134 133 18 18m0-18-18 18" stroke="#293550" stroke-width="6.5" stroke-linecap="round"/>
+</svg>
+</svg>
