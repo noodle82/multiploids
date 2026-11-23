@@ -7,12 +7,14 @@ workflows:
       app_store_connect: Codemagic
     environment:
       node: "22"
-      xcode: latest
+      xcode: "27.2"
       cocoapods: default
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.multiploids.tables
     scripts:
+      - name: Verify Apple SDK is ready for App Store Connect
+        script: node scripts/check-apple-sdk.mjs
       - name: Install pinned dependencies
         script: npm ci --ignore-scripts --no-audit --no-fund
       - name: Verify learning rules and native configuration
@@ -45,12 +47,14 @@ workflows:
       app_store_connect: Codemagic
     environment:
       node: "22"
-      xcode: latest
+      xcode: "27.2"
       cocoapods: default
       ios_signing:
         distribution_type: ad_hoc
         bundle_identifier: com.multiploids.tables
     scripts:
+      - name: Verify Apple SDK is ready for App Store Connect
+        script: node scripts/check-apple-sdk.mjs
       - name: Install pinned dependencies
         script: npm ci --ignore-scripts --no-audit --no-fund
       - name: Verify learning rules and native configuration

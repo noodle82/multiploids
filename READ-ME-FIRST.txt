@@ -1,22 +1,26 @@
-Multiploids 0.4.4 — revised logo intro + all previous Mission Control updates
+Multiploids 0.4.5 — module colour haze + SDK build update
 
-USE THIS PACKAGE INSTEAD OF THE PREVIOUS 0.4.3 ZIP.
-It includes the cleaner Mission Control, badge celebrations, new in-game logo and matching iPad icon, plus the revised intro without the dancing creature.
+USE THIS PACKAGE INSTEAD OF PREVIOUS UPDATE ZIPS.
+It includes the current title/logo/× intro, simpler Mission Control, badge celebrations and matching icon, plus the approved module colours and the new Xcode selection.
 
+UPLOAD AND TESTFLIGHT BUILD
 1. Extract this ZIP on your PC.
 2. Open https://github.com/noodle82/multiploids on branch main.
-3. Add file > Upload files. Upload the TWELVE application files and the native and tests FOLDERS from inside this extracted update. Keep those folder names. Do not upload the ZIP or the enclosing update folder. This README is instructions only.
-4. Commit. No audio folder, certificate, signing profile, device registration or Bundle ID change is required.
-5. Build Multiploids Family iPad — Ad Hoc in Codemagic for your daughter. Build TestFlight separately if you also want adult testers updated.
-6. Download that new App.ipa, upload it to Diawi and use the NEW installation link in Safari on her registered iPad.
-7. If Diawi says Download application, cancel the file download and use Safari page menu > Request Mobile Website, then reload to see Install application.
-8. Install over the existing app to retain progress. Do not delete the existing app. The new version is 0.4.4.
+3. Add file > Upload files. Upload the FOURTEEN root application/configuration files and the native, scripts and tests FOLDERS from inside this update. Keep these folder names. Do not upload the enclosing update folder or ZIP. This README is instructions only. In particular, codemagic.yaml must replace the file at the repository ROOT, and scripts/check-apple-sdk.mjs must retain its scripts folder.
+4. Commit the changes.
+5. In Codemagic open Multiploids, refresh the main branch configuration, and start Multiploids iOS TestFlight. This is the TestFlight route you requested; no Diawi or Ad Hoc install is needed.
+6. The new first build step is Verify Apple SDK is ready for App Store Connect. It must log Xcode 27.2 and an iPhoneOS SDK version of 27 or higher. If an older version is selected it stops before building with a clear message. An older completed build cannot change SDK: you need this NEW build from the new commit.
+7. After the build succeeds and Apple finishes processing, open App Store Connect > Multiploids > TestFlight and select the new 0.4.5 build for the relevant tester group. Follow any beta-review prompts for external testers.
 
-THE NEW INTRO
-Multiploids title first → three-eyed logo with a cute soft bloop → × badge with a finishing chime. No separate 3D creature or dance.
-Skip introduction and Let's play enter the game. The intro also finishes automatically after about four seconds. If Safari does not allow startup sound, tap Replay with sound. Existing mute settings are respected until that explicit sound button is tapped. Grown-ups > Replay the introduction shows it again.
+The workflow now uses the documented Xcode 27.2 build image instead of latest. No certificate, profile, device registration, Bundle ID, audio or deployment-target change is needed. The family Ad Hoc workflow remains available but you do not need to run it for TestFlight.
 
-The icon in the game header and on the iPad remains the new matching three-eyed design. Both Mission Control summary boxes remain removed. New badges pause the question while your own Multiploid celebrates and offers Update my Multiploid or Keep playing.
+ITMS-90725
+The message is advance notice that, from April 2027, Apple requires the iOS/iPadOS 27 SDK or newer. This update selects an appropriate toolchain now and checks the actual version on the build Mac. A signed Mac archive and Apple's acceptance still need confirming in your next Codemagic run; those cannot be verified on this Windows computer.
+Apple: https://developer.apple.com/news/?id=k1mtkt1k
+Codemagic: https://docs.codemagic.io/specs-macos/xcode-27-2/
+
+COLOURS
+Cargo Crew: mint. Launch Bridge: lilac. Array Shields: blue. Orbit Sketch: pink. Rocket Fuel keeps its warm background. Completed modules remain green.
 
 CHECKED
-43 automated checks passed. Browser sequence, both new sound cues, mute/replay/skip behaviour, reduced motion and iPad/phone widths passed. All 192 local iPad bundle assets match source. Please check sound on your physical iPad after installing; no signed IPA was created locally.
+46 automated checks passed, including the SDK-version guard. The actual card backgrounds match the approved preview; completed styling and tablet/phone layouts passed browser checks. All 192 local native runtime assets match source. Please test the signed build through TestFlight after Apple processes it.
