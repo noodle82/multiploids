@@ -1,4 +1,4 @@
-# Multiploids v1.0.1 — Get the crew home
+# Multiploids v1.1.1 — Get the crew home
 
 A playable space-themed multiplication prototype for ages 5–11. Dark starry skies, numbered rockets, a customisable Multiploid and a little crew who need help getting home. Division is not included.
 
@@ -156,3 +156,16 @@ Codemagic Xcode 27.2 / M2 machine specification: https://docs.codemagic.io/specs
 ## Release 1.0.1
 
 Modules open at their activity header instead of retaining Mission Control scroll. Resuming from the workshop and starting a new round also align the header; normal answering, cargo taps and drawing do not reset the viewport. Verified all eight learning modes at 1024×768, 1180×820, 820×1180 and 393×852.
+
+## Release 1.1.0 — Growing collections and phone layouts
+
+- Try on combinations before Keep this look; Cancel try-on restores the saved appearance. Take off removes any owned suit or accessory, including rainbow and weekly suits.
+- Earned body colours, antennae and outfits remain changeable across missions. Name, shape and voice remain the creation-mission identity.
+- 40 new accessories (hats, suits, boots, scanners, gloves and space jewels) and 11 additional body colours. 51 permanent collection milestones begin at 60 questions and continue every 20 through 1,060. A fact/activity earns collection credit once each day; resetting a mission cannot farm that day’s credit. Weekly suits continue after the milestone collection.
+- Smaller rocket cards with five module-coloured progress bars arranged like the preparation cards. Removed the missed-facts sentence.
+- Compact phone activities, complete keypad and check button, uncropped interactive diagrams, optional drawing star buttons and safe-area padding.
+- Existing learner data, rockets, records, clothing and the 773011 review route retained.
+
+## Release 1.1.1
+
+Approved shorter 144px rocket cards with larger artwork and narrow module-coloured progress bars. Removed the per-card systems-ready counter and selected/active-rocket explanatory line.

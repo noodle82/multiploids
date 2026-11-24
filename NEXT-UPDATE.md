@@ -8,3 +8,7 @@
 - Full badge customisation and fresh-demo/exit controls.
 - Removed launch/intro preview tools from Grown-ups.
 - Accessible offline privacy notice and gated online policy link.
+
+## Completed for 1.1.0
+
+Try-on/confirm wardrobe, removable special suits, permanent earned colour/antennae choices, 51 extended collection rewards, compact colour-keyed ships and compact phone activities.

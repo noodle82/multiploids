@@ -80,3 +80,11 @@ Codemagic Xcode 27.2 / M2 machine specification: https://docs.codemagic.io/specs
 ## Release 1.0.1
 
 52 automated tests passed. 32 browser entry cases passed across eight modes and four tablet/phone sizes. Cargo and number-pad interaction preserved scroll position. Physical iPad testing and a signed Apple build remain for TestFlight.
+
+## Release 1.1.0
+
+59 automated tests passed. 32 activity layout checks across 375×623, 393×774, 430×820 and 1024×768; three dense 12-table construction checks at 375×623. Full keypad and check button remained in the available phone viewport. Browser tests verified try-on/cancel/confirm, removing and re-equipping rainbow, all nine category tabs, all six accessory types rendered together, compact fleet width and progress fill/colours, and isolated App Review changes preserving learner storage. No physical-device or signed-IPA test performed on Windows.
+
+## Release 1.1.1
+
+All twelve cards checked at 320, 393, 820 and 1180px, including title and progress-bar bounds, no horizontal page overflow, 144px card height and removed summary/counter wording. Native configuration and bundled build checked. The 59-test automated suite last passed on 1.1.0; this release changes card presentation and wording only.

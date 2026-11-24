@@ -1,7 +1,7 @@
 {
-  "version": "1.0.1",
-  "date": "2026-11-23",
-  "automatedTests": 52,
+  "version": "1.1.1",
+  "date": "2026-11-24",
+  "automatedTests": 59,
   "browserRuntimeExceptions": 0,
   "starterGames": 2,
   "unlockableGames": 12,
@@ -23,8 +23,8 @@
   "offline": {
     "checked": false,
     "lastBrowserVerifiedVersion": "0.4.3",
-    "bundledNativeAssets": 194,
-    "note": "Current native bundle assets match source; fresh full offline playback not repeated for 1.0.1."
+    "bundledNativeAssets": 197,
+    "note": "All current native bundle assets hash-verified against source. Full offline playback was not repeated for 1.1.0; no new network services or speech assets introduced."
   },
   "physicalIpadTested": false,
   "published": false,
@@ -39,7 +39,20 @@
     "extraCanvas": false,
     "physicalIpadTested": false
   },
-  "compactFleet": true,
+  "compactFleet": {
+    "height": 144,
+    "largerArtwork": true,
+    "narrowModuleBars": true,
+    "readinessCounterRemoved": true,
+    "selectedSummaryRemoved": true,
+    "widthsChecked": [
+      320,
+      393,
+      820,
+      1180
+    ],
+    "cardsCheckedPerWidth": 12
+  },
   "fiveModuleStrips": true,
   "allSixEncountersCentred": true,
   "bottomModuleExit": true,
@@ -150,5 +163,22 @@
     "ordinaryRendersPreservePosition": true,
     "browserCases": 32,
     "physicalIpadTested": false
-  }
+  },
+  "collection": {
+    "newItems": 40,
+    "newBodyColours": 11,
+    "milestones": 51,
+    "lastAt": 1060,
+    "persistentAcrossMissions": true,
+    "dailyUniqueFactActivityCredit": true,
+    "previewCancelCommitTested": true,
+    "specialSuitRemovalTested": true
+  },
+  "phoneLayout": {
+    "browserChecks": 32,
+    "denseChecks": 3,
+    "answerControlsFit": true,
+    "physicalIphoneTested": false
+  },
+  "lastAutomatedSuiteVersion": "1.1.0"
 }

@@ -1,3 +1,4 @@
+import {ensureCollection,COLLECTION_REWARDS} from './collection-rewards.js';
 import {newState,confirmIdentity,factsFor,recordPractice} from './learning.js';
 import {ensureFleet} from './rockets.js';
 import {ITEMS,grantRainbowSuit} from './wardrobe.js';
@@ -13,6 +14,6 @@ export function createReviewState(){
  p.species='blob';p.palName='Your Multiploid';p.mission.locks={};p.mission.claimed={};
  p.coins=500;p.rainbowUnlocked=true;
  p.owned=Object.values(ITEMS).flat().map(item=>item.id);grantRainbowSuit(p);
- ensureFleet(p);initialiseBadgeNotices(p);p.mission.badgeNoticeLevel=6;p.mission.pendingBadges=[];
+ ensureCollection(p);p.collection.total=COLLECTION_REWARDS.at(-1).at;ensureCollection(p);ensureFleet(p);initialiseBadgeNotices(p);p.mission.badgeNoticeLevel=6;p.mission.pendingBadges=[];
  return state;
 }

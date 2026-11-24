@@ -1,0 +1,125 @@
+/* Permanent collection and deliberate try-on controls. */
+.closet-layout{display:grid;grid-template-columns:minmax(250px,.7fr) minmax(0,1.5fr);gap:24px;align-items:start}
+.closet-preview{position:sticky;top:16px;text-align:center;background:linear-gradient(150deg,#222440,#12253a);border:1px solid #46506f;border-radius:26px;padding:16px}
+.closet-model{height:290px}.closet-preview h2{font-size:30px}.closet-preview p{font-size:12px;margin:10px 0}
+.closet-confirm{display:grid;gap:10px}.closet-confirm button{width:100%}.closet-collection{min-width:0;display:grid;gap:18px}
+.closet-tabs{display:flex;flex-wrap:wrap;gap:8px}.closet-tabs .selected{background:#74629d;color:#fff}
+.closet-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:12px}
+.closet-option{min-width:0;min-height:116px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:13px 9px;background:#19273e;color:#d8dfef;border:1px solid #3e526c;border-radius:17px;text-align:center}
+.closet-option.selected{border:2px solid #c0a0ed;background:#302b50}.closet-option i{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;color:#fff;font-size:22px;font-style:normal;box-shadow:inset 0 0 0 1px #ffffff30}.closet-option strong{font-size:14px;line-height:1.2}.closet-option small{font-size:10px;line-height:1.4}.closet-option:disabled{opacity:.45}.journey-card h2{font-size:26px}.journey-card progress{width:100%;accent-color:#94d8c4;margin-top:14px}
+.orbit-button-tools{margin-top:10px}.orbit-button-tools summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:#c9b8e8;font-size:12px}.orbit-button-tools .orbit-accessible{margin-top:4px}
+/* Compact numbered ships with the same five colours as the activities. */
+.fleet-bay,.fleet-bay.collapsed,.fleet-bay.expanded{grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px}
+.fleet-card.compact-rocket{display:flex;align-items:center;text-align:left;padding:11px 12px 11px 4px;gap:3px;min-height:125px;border-radius:20px}
+.compact-rocket .fleet-rocket{width:58px;min-width:58px;height:100px;margin:0}.compact-rocket .fleet-rocket svg{width:100%;height:100%}
+.fleet-card.compact-rocket h2{font-size:23px;margin:5px 0 8px}.fleet-card.compact-rocket small{font-size:6px;letter-spacing:.7px}.compact-rocket .fleet-status{display:block;font-size:8px;margin-bottom:7px}
+.compact-rocket .fleet-strips{height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;border:0;border-radius:0;background:none;overflow:visible;margin:0}
+.compact-rocket .fleet-strip{height:10px;border:1px solid var(--module-colour);background:color-mix(in srgb,var(--module-colour) 12%,#132039);border-radius:3px;overflow:hidden;display:block;position:relative}
+.compact-rocket .fleet-strip:first-child{grid-column:1/-1}.compact-rocket .fleet-strip i{display:block;height:100%;background:var(--module-colour);border-radius:1px}.compact-rocket.launched .fleet-strip i{background:var(--module-colour)}
+@media(max-width:700px){
+ .fleet-bay,.fleet-bay.collapsed,.fleet-bay.expanded{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .fleet-card.compact-rocket{padding:10px 9px 10px 1px;min-height:119px;border-radius:16px}.compact-rocket .fleet-rocket{width:43px;min-width:43px;height:88px}.fleet-card.compact-rocket h2{font-size:20px}.fleet-card.compact-rocket small{font-size:5.5px;letter-spacing:.3px}.fleet-card.compact-rocket .fleet-status{font-size:7px}.compact-rocket .fleet-strip{height:9px}
+ .closet-layout{display:block}.closet-preview{top:max(8px,env(safe-area-inset-top,0px));z-index:5;padding:8px 12px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:0 12px;box-shadow:0 10px 25px #080e2499;border-radius:18px;margin-bottom:16px}.closet-model{grid-column:1;grid-row:1/5;height:152px}.closet-preview h2{grid-column:2;font-size:23px;margin-top:5px}.closet-preview p{grid-column:2;font-size:10px;margin:5px 0}.closet-confirm{grid-column:2;grid-template-columns:1fr;gap:6px}.closet-confirm button{min-height:40px;padding:8px;font-size:11px}.closet-preview>.primary{grid-column:2;font-size:12px}.closet-preview>.text-button{display:none}.closet-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.closet-option{padding:10px 6px;min-height:110px}.closet-option strong{font-size:12px}.closet-option small{font-size:9px}.closet-tabs{gap:6px}.closet-tabs button{min-height:42px;padding:8px 11px;font-size:11px}
+ /* The activity, equation and keypad share a compact portrait screen. */
+ body[data-view=game]>.app-header,body[data-view=game] #app>.app-header{display:none}
+ body[data-view=game] main{padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px))}
+ body[data-view=game] .game-top{padding:0 0 8px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 8px;scroll-margin-top:max(12px,env(safe-area-inset-top,0px))}
+ body[data-view=game] .game-top>button{grid-column:1;grid-row:1/3;min-height:42px;padding:8px 10px;font-size:10px}
+ body[data-view=game] .game-top>span:first-of-type{grid-column:2;font-size:19px;text-align:right;line-height:1.1}
+ body[data-view=game] .game-top>span:last-child{grid-column:2;width:auto;font-size:9px;text-align:right}
+ body[data-view=game] .game-layout{gap:8px;min-width:0}
+ body[data-view=game] .game-stage{height:auto;min-height:0;overflow:visible;border-radius:17px}
+ body[data-view=game] .learning-stage,body[data-view=game] .skyhop-stage{height:148px;min-height:0;border-radius:17px;overflow:hidden;position:relative}
+ body[data-view=game] .stage-heading{top:12px;left:13px;right:12px;padding-right:0}
+ body[data-view=game] .stage-heading>span{display:none}
+ body[data-view=game] .stage-heading h2{font-size:18px;line-height:1.12;max-width:70%}
+ body[data-view=game] .stage-heading p{font-size:9px;line-height:1.4;margin-top:5px;max-width:68%}
+ body[data-view=game] .small-game-pal{width:90px;height:100px;bottom:0;left:auto;right:0;transform:none;max-width:none}
+ body[data-view=game] .power-machine{left:12px;right:auto;top:64px;width:190px;height:76px;border-width:3px;border-radius:12px}
+ body[data-view=game] .machine-window{margin:5px;padding:4px;gap:3px}.machine-aerial{pointer-events:none}
+ body[data-view=game] .machine-window i{height:14px;font-size:8px}.power-stage .machine-label,.power-stage .machine-dial{display:none}
+ body[data-view=game] .flight-check-stage .check-fleet{left:14px;right:90px;top:55px;max-width:none;height:90px}
+ body[data-view=game] .flight-check-stage .small-game-pal{right:0;left:auto;bottom:0;height:100px;width:110px}.flight-check-stage .check-count{display:none}
+ body[data-view=game] .bridge-stage .bridge-stones{top:75px;left:12px;right:95px;gap:5px}
+ body[data-view=game] .bridge-stage .bridge-stones span{height:40px;font-size:19px;min-width:0}.bridge-stage .gantry-rocket{display:none}
+ body[data-view=game] .cargo-stage{height:215px}
+ body[data-view=game] .cargo-groups{position:absolute;top:47px;left:12px;right:12px;bottom:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+ body[data-view=game] .cargo-crate{height:44px;min-height:44px;padding:4px;border-radius:8px}
+ body[data-view=game] .cargo-crate>div{gap:3px}.cargo-crate i{width:4px;height:4px}
+ body[data-view=game] .cargo-crate span{font-size:8px}.cargo-stage .small-game-pal,.cargo-stage .stage-ground{display:none}
+ body[data-view=game] .cargo-stage .visual-caption{position:absolute;bottom:7px;top:auto;left:12px;font-size:9px}
+ body[data-view=game] .array-stage{height:auto;min-height:242px;padding:12px}
+ body[data-view=game] .array-stage .stage-heading{position:static;margin:0 0 8px;padding:0}.array-stage .hands-on-copilot{display:none}
+ body[data-view=game] .array-stage .stage-heading h2{max-width:100%;font-size:18px}
+ body[data-view=game] .array-stage .stage-heading p{max-width:100%;font-size:9px}
+ body[data-view=game] .array-builder{position:static;margin:0;display:grid;grid-template-columns:1fr;gap:5px}
+ body[data-view=game] .star-row-source{min-height:44px;padding:6px}.star-row-source small{font-size:8px}
+ body[data-view=game] .array-target{min-height:80px;max-height:155px;padding:7px;border-radius:10px;overflow:visible}
+ body[data-view=game] .array-target>p{padding:6px;font-size:9px;line-height:1.4}.array-count{font-size:9px}
+ body[data-view=game] .array-row{padding:3px;margin-top:3px;min-height:25px}.array-row button{height:25px;min-height:25px;width:30px}.array-row i{font-size:11px}
+ body[data-view=game] #clear-rows{min-height:30px;padding:4px;font-size:9px}
+ body[data-view=game] .draw-stage{height:auto;min-height:0;padding:11px}
+ body[data-view=game] .draw-stage .stage-heading{position:static;margin:0 0 7px;padding:0}.draw-stage .hands-on-copilot{display:none}
+ body[data-view=game] .draw-stage .stage-heading h2{font-size:18px;max-width:100%}.draw-stage .stage-heading p{display:none}
+ body[data-view=game] .orbit-tools{margin:6px 0;gap:5px;flex-wrap:nowrap}.orbit-tools .small-button{min-height:36px;padding:7px;font-size:9px}.orbit-tools .text-button{min-height:36px;font-size:9px}
+ body[data-view=game] .orbit-tool-note{display:none}
+ body[data-view=game] .draw-stage #orbit-canvas{width:100%;height:140px;aspect-ratio:auto;max-width:100%;border-radius:10px}
+ body[data-view=game] .orbit-button-tools{margin-top:3px}.orbit-button-tools summary{min-height:32px;font-size:10px}
+ body[data-view=game] .draw-counts{font-size:9px;margin-top:0;line-height:1.3}
+ body[data-view=game] .cosmic-stage{height:170px}.cosmic-stage .encounter-art{height:125px;width:125px;top:-5px}.cosmic-stage .encounter-label{top:53px;left:12px;right:125px}.cosmic-stage .encounter-label h2{font-size:18px}.cosmic-stage .encounter-label p{display:none}
+ body[data-view=game] .cosmic-stage .altitude-tag{top:10px;left:12px}.cosmic-stage .altitude-tag>strong{font-size:28px}.cosmic-stage .altitude-tag>span{font-size:7px}.cosmic-stage .altitude-tag small{display:inline;margin-left:5px;font-size:9px}
+ body[data-view=game] .cosmic-stage .game-creature{height:130px;width:160px;bottom:0;left:55%}.cosmic-stage .target-cloud{top:85px;right:8px;font-size:18px}.cosmic-stage .landing-platform{bottom:0}.cosmic-stage .next-hop-platform{bottom:90px}.cosmic-stage .record-flag{font-size:8px;bottom:8px}
+ body[data-view=game] .launch-check-stage{height:182px;min-height:0}.launch-check-stage .stage-heading p{display:none}
+ body[data-view=game] .preflight-rocket{height:125px;width:80px;top:49px;left:38%}.launch-check-stage .launch-streak{left:12px;bottom:20px}.launch-check-stage .launch-streak strong{font-size:30px}
+ body[data-view=game] .launch-lamps{left:auto;right:20px;top:36px;bottom:auto;height:135px;width:24px}.launch-check-stage .small-game-pal{display:none}
+ body[data-view=game] .question-card{padding:11px 12px;border-radius:17px;display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;align-items:center;position:relative}
+ body[data-view=game] .question-speaker{grid-column:1/-1;min-height:30px;gap:6px}.question-speaker strong{font-size:13px}
+ body[data-view=game] .question-speaker .icon-button{min-height:32px;min-width:36px;font-size:17px;border-radius:10px}
+ body[data-view=game] .question-card h1,body[data-view=game] .question-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0;padding:0}
+ body[data-view=game] .equation{grid-column:1;grid-row:2;font-size:35px;margin:0;gap:7px}.equation b{font-size:24px}
+ body[data-view=game] .answer-wrap{grid-column:2;grid-row:2;margin:0;gap:5px}.answer-wrap label{font-size:9px;letter-spacing:0}
+ body[data-view=game] .answer-wrap input{width:65px;min-width:0;height:40px;font-size:26px;border-radius:11px}
+ body[data-view=game] .number-pad{grid-column:1/-1;gap:5px}
+ body[data-view=game] .number-pad button{min-height:44px;height:44px;font-size:24px;border-radius:10px}
+ body[data-view=game] .answer-button{grid-column:1/-1;margin:2px 0 0;min-height:44px;padding:8px;font-size:13px}
+ body[data-view=game] .answer-feedback{grid-column:1/-1;min-height:16px;font-size:10px;line-height:1.35;margin:2px 0}
+ body[data-view=game] .question-tools{grid-column:1/-1;display:flex;justify-content:space-between;margin:0}.question-tools button{min-height:36px;font-size:10px}
+ body[data-view=game] .audio-note{grid-column:1/-1;font-size:9px;margin:0}.audio-note:empty{display:none}
+ body[data-view=game] #skip-test{grid-column:1/-1;min-height:36px;font-size:10px}
+ body[data-view=game] .next-badge{display:none}
+ body[data-view=game] .module-exit{margin-top:10px}.module-exit button{min-height:42px}
+ body[data-view=game] footer{display:none}
+}
+@media(max-width:360px){body[data-view=game] .game-top>span:first-of-type{font-size:16px}.closet-model{height:130px}.closet-preview{grid-template-columns:90px 1fr}.closet-option strong{font-size:11px}.compact-rocket .fleet-rocket{width:33px;min-width:33px}.fleet-card.compact-rocket h2{font-size:18px}}
+@media(max-width:700px){body[data-view=game] .power-stage .stage-heading p,body[data-view=game] .machine-aerial{display:none}}
+@media(max-width:700px){
+ body[data-view=game] .array-builder{grid-template-columns:minmax(0,1fr) 65px}
+ body[data-view=game] .star-row-source{grid-column:1;grid-row:1}
+ body[data-view=game] .array-target{grid-column:1/-1;grid-row:2}
+ body[data-view=game] #clear-rows{grid-column:2;grid-row:1;min-height:44px;line-height:1.3}
+}
+@media(max-width:700px) and (max-height:740px){
+ body[data-view=game] .question-speaker{position:absolute;right:calc(50% - 16px);top:13px;width:32px;height:32px;min-height:0;display:block}
+ body[data-view=game] .question-speaker strong,body[data-view=game] .question-speaker .speaker-dot{display:none}
+ body[data-view=game] .question-speaker .icon-button{min-width:32px;width:32px;min-height:32px;padding:0}
+ body[data-view=game] .question-card{padding:9px 10px;gap:5px 12px}
+ body[data-view=game] .equation{grid-row:1;font-size:30px;justify-content:flex-start}
+ body[data-view=game] .answer-wrap{grid-row:1;justify-content:flex-end}.answer-wrap label{display:none}
+ body[data-view=game] .answer-wrap input{height:36px}
+ body[data-view=game] .number-pad{gap:4px}
+ body[data-view=game] .array-stage{min-height:0}
+ body[data-view=game] .array-stage .stage-heading p{display:none}
+ body[data-view=game] .draw-stage{padding:8px}
+ body[data-view=game] .draw-stage #orbit-canvas{height:100px}
+ body[data-view=game] .draw-stage .stage-heading h2{font-size:16px}
+}
+
+@media(max-width:700px){body[data-view=game] .array-target{display:grid;grid-template-columns:1fr 1fr;gap:4px;max-height:none;min-height:75px}body[data-view=game] .array-target>.array-count,body[data-view=game] .array-target>p{grid-column:1/-1}body[data-view=game] .array-row{min-width:0;gap:3px;padding:3px;margin:0}body[data-view=game] .array-row>span{flex-wrap:wrap;gap:2px}body[data-view=game] .array-row i{font-size:10px}body[data-view=game] .array-row button{flex-shrink:0}}
+
+@media(max-width:700px) and (max-height:740px){body[data-view=game] .array-row>span{gap:1px}body[data-view=game] .array-row i{font-size:8px}body[data-view=game] .array-row button{width:26px}}
+@media(max-width:700px) and (max-height:740px){body[data-view=game] .array-stage{padding:8px}body[data-view=game] .array-stage .stage-heading{margin-bottom:4px}body[data-view=game] .array-builder{gap:3px}body[data-view=game] .array-target{padding:5px}body[data-view=game] .array-row>span{flex-wrap:nowrap;gap:0;min-width:0}body[data-view=game] .array-row i{font-size:8px;flex-shrink:0}}
+@media(max-width:700px) and (max-height:740px){body[data-view=game] .array-stage{padding:6px}}
+
+/* Approved shorter fleet cards, 24 November 2026. */
+.fleet-bay,.fleet-bay.collapsed,.fleet-bay.expanded{grid-template-columns:repeat(auto-fill,196px);justify-content:start;gap:14px}.fleet-card.compact-rocket{height:144px;min-height:144px;padding:6px 12px 6px 6px;gap:5px;border-radius:22px}.compact-rocket .fleet-rocket{width:82px;min-width:82px;height:132px}.fleet-card.compact-rocket h2{font-size:20px;margin:8px 0 15px;white-space:nowrap}.compact-rocket .fleet-strips{width:100%;max-width:112px;gap:6px}.compact-rocket .fleet-strip{height:14px;border-radius:4px}.compact-rocket .fleet-status{display:none}.fleet-card.compact-rocket small{font-size:6px;letter-spacing:.7px}@media(max-width:700px){.fleet-bay,.fleet-bay.collapsed,.fleet-bay.expanded{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.fleet-card.compact-rocket{height:144px;min-height:144px;padding:6px 8px 6px 3px;gap:2px}.compact-rocket .fleet-rocket{width:60px;min-width:60px;height:128px}.fleet-card.compact-rocket h2{font-size:18px}.compact-rocket .fleet-strips{max-width:100px}.compact-rocket .fleet-strip{height:12px}}
+@media(max-width:360px){.compact-rocket .fleet-rocket{width:40px;min-width:40px;height:115px}.fleet-card.compact-rocket h2{font-size:16px}}
